@@ -6,6 +6,7 @@ pipeline {
        stage('Buiding') {
             steps {
                 echo 'Building.....'
+                sh 'cd /var/lib/jenkins/workspace/JavaWebCalculator/JavaWebCalculator'
                 sh '/usr/bin/mvn clean package'
             }
         }
