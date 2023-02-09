@@ -18,6 +18,7 @@ pipeline {
         stage('Delopy') {
             steps {
                 echo 'Deploying....'
+                ansiblePlaybook become: true, disableHostKeyChecking: true, installation: 'ansible', inventory: '/var/lib/jenkins/workspace/JavaWebCalculator/hosts.ini', playbook: '/var/lib/jenkins/workspace/JavaWebCalculator/deploy.yml', sudo: true
             }
         }
     }
