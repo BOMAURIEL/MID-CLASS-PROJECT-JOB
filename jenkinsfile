@@ -6,6 +6,7 @@ pipeline {
        stage('Buiding') {
             steps {
                 echo 'Building.....'
+                sh '/usr/share/maven/lib/guice.jar'
                 sh '/usr/bin/mvn clean package'
             }
         }
