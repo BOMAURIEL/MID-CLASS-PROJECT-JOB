@@ -3,13 +3,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Initialize') {
-            steps {
-                echo 'Initializing.....'
-                sh '/usr/bin/mvn initialize'
-            }
-        }
-        stage('Buiding') {
+       stage('Buiding') {
             steps {
                 echo 'Building.....'
                 sh '/usr/bin/mvn clean package'
