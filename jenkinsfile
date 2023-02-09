@@ -6,19 +6,19 @@ pipeline {
         stage('Initialize') {
             steps {
                 echo 'Initializing.....'
-                sh '/var/lib/jenkins/workspace/JavaWebCalculator/JavaWebCalculator/mvn initialize'
+                sh '/usr/bin/mvn initialize'
             }
         }
         stage('Buiding') {
             steps {
                 echo 'Building.....'
-                sh '/var/lib/jenkins/workspace/JavaWebCalculator/JavaWebCalculator/mvn clean package'
+                sh '/usr/bin/mvn clean package'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing.....'
-                sh '/var/lib/jenkins/workspace/JavaWebCalculator/JavaWebCalculator/mvn test'
+                sh '/usr/bin/mvn test'
             }
         }
         stage('Delopy') {
