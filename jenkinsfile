@@ -1,1 +1,30 @@
 
+pipeline {
+    agent any
+
+    stages {
+        stage('Initialize') {
+            steps {
+                echo 'Initializing.....'
+                sh 'mvn initialize'
+            }
+        }
+        stage('Buiding') {
+            steps {
+                echo 'Building.....'
+                sh 'mvn clean package'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing.....'
+                sh '/usr/share/maven/bin/mvn test'
+            }
+        }
+        stage('Delopy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
+}
