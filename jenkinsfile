@@ -18,7 +18,7 @@ pipeline {
         stage('Delopy') {
             steps {
                 echo 'Deploying....'
-                ansiblePlaybook become: true, disableHostKeyChecking: true, installation: 'ansible', inventory: 'hosts.ini', playbook: 'deploy.yml'
+                ansiblePlaybook disableHostKeyChecking: true, installation: 'ansible', inventory: 'hosts.ini', playbook: 'deploy.yml'
             }
         }
     }
