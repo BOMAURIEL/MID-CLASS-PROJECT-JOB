@@ -2,7 +2,8 @@
 - name: Install Apache Tomcat10 using ansible
   hosts: webserver
   remote_user: ubuntu
-  become: true
+  become: yes
+  
   tasks:
     - name: Update the System Packages
       apt:
