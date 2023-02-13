@@ -56,7 +56,7 @@
     - name: deploying the new WAR-file to target servers
       copy:
         src: /var/lib/jenkins/workspace/jenkins/target/webapp-0.2.war
-        dest: /home/ubuntu/tomcat/webapps
+        dest: /opt/tomcat10/webapps
         mode: 0755
 
     - name: Start and Enable Tomcat 10 on sever
